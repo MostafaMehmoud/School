@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+}
+
+<form action="Create" method="post" enctype="multipart/form-data">
+    <fieldset >
+        <legend> fieldset example</legend>
+        <div class="mb-3">
+            <label for="Input" class="form-label">Enter The Name</label>
+            <input type="text" id="Input" class="form-control" name="StudentName" placeholder="Student Name">
+        </div>
+        <div class="mb-3">
+            <label for="Text" class="form-label">Enter The Age</label>
+            <input type="number" id="Text" class="form-control" name="StudentAge" placeholder="Student Age">
+        </div>
+        <div class="mb-3">
+            <div class="form-check">
+                <input class="form-check-input" name="IsActive" value="true" type="checkbox" id="FieldsetCheck" >
+                <label class="form-check-label" for="FieldsetCheck">
+                    Is Active
+                </label>
+            </div>
+        </div>
+        <div class="mb-3">
+            <div class="form-check">
+                <input class="form-check-input" name="StudentPhoto"  type="file" >
+                <label class="form-check-label" for="FieldsetCheck">
+                    Student Photo
+                </label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </fieldset>
+</form>

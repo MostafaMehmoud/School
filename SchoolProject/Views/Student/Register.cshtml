@@ -1,0 +1,26 @@
+﻿@model SchoolProject.Models.ViewModels.StudentCourseVM
+<form action="Register" method="post">
+    <div>
+        <select class="form-select" name="StudentId" aria-label="Default select example">
+            <option selected>Select the student</option>
+            @foreach(Student student in Model.Students)
+            {
+                <option value="@student.StudentId">@student.StudentName</option>
+            }
+            
+        </select>
+    </div>
+    <div>
+        <select class="form-select" aria-label="Default select example" name="CourseId">
+            <option selected>select the Courses</option>
+            @foreach(Course course in Model.Courses)
+            {
+                 <option value="@course.CourseId">@course.CourseName</option>
+                
+            }
+            
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-info">Submit</button>
+</form>
